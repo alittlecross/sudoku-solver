@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sudoku</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <table id="solution">
+      <% solution.forEach((row, ri) => { %>
+        <tr class="row">
+          <% row.forEach((cell, ci) => { %>
+            <td class="cell">
+
+              <% if (sudoku[ri][ci] === 0) { %>
+
+                <% if (Array.isArray(cell)) { %>
+                  <table>
+                    <tr>
+                      <td class="pencil-mark"><% if (cell.includes(1)) { %>1<% } %></td>
+                      <td class="pencil-mark"><% if (cell.includes(2)) { %>2<% } %></td>
+                      <td class="pencil-mark"><% if (cell.includes(3)) { %>3<% } %></td>
+                    </tr>
+                    <tr>
+                      <td class="pencil-mark"><% if (cell.includes(4)) { %>4<% } %></td>
+                      <td class="pencil-mark"><% if (cell.includes(5)) { %>5<% } %></td>
+                      <td class="pencil-mark"><% if (cell.includes(6)) { %>6<% } %></td>
+                    </tr>
+                    <tr>
+                      <td class="pencil-mark"><% if (cell.includes(7)) { %>7<% } %></td>
+                      <td class="pencil-mark"><% if (cell.includes(8)) { %>8<% } %></td>
+                      <td class="pencil-mark"><% if (cell.includes(9)) { %>9<% } %></td>
+                    </tr>
+                  </table>
+                <% } else { %>
+                  <input class="correct" type="text" value="<%= cell %>">
+                <% } %>
+
+              <% } else { %>
+                <input type="text" value="<%= sudoku[ri][ci] %>">
+              <% } %>
+
+            </td>
+          <% }) %>
+        </tr>
+      <% }) %>
+    </table>
+    <a href="/">Back</a>
+  </body>
+</html>

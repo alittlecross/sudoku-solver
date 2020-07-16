@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sudoku</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <form action="/" method="POST">
+      <table id="sudoku">
+        <% sudoku.forEach((row, ri) => { %>
+          <tr class="row">
+            <% row.forEach((cell, ci) => { %>
+              <td class="cell"><input type="text" name="<%= ri %>-<%= ci %>" <% if (cell) { %>value="<%= cell %>"<% } %>></td>
+            <% }) %>
+          </tr>
+        <% }) %>
+      </table>
+      <button>Solve</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+* {
+  font-family: Verdana;
+}
+
+a, button {
+  display: inline-block;
+  text-decoration: none;
+  margin: 20px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, .cell {
+  border: none;
+  width: 90px;
+  height: 90px;
+  padding: 0;
+  font-size: 60px;
+  text-align: center;
+}
+
+.cell {
+  border: 1px #111 dotted;
+}
+
+.correct {
+  color: #4400ff;
+}
+
+.pencil-mark {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 20px;
+  color: #ff0077;
+}
+
+.row:nth-child(1), .row:nth-child(4), .row:nth-child(7) {
+  border-top: 4px #111111 solid;
+}
+
+.cell:nth-child(9) {
+  border-right: 4px #111111 solid;
+}
+
+.row:nth-child(9) {
+  border-bottom: 4px #111111 solid;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+  border-left: 4px #111111 solid;
+}
